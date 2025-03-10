@@ -1,0 +1,126 @@
+{% if section.settings.show_content %}
+  <main id="maincontent" class="page-main">
+    <div class="columns">
+      <div class="column main">
+        <div data-content-type="row" data-appearance="contained" data-element="main">
+          <div
+            data-enable-parallax="0"
+            data-parallax-speed="0.5"
+            data-background-images="{}"
+            data-background-type="image"
+            data-video-loop="true"
+            data-video-play-only-visible="true"
+            data-video-lazy-load="true"
+            data-video-fallback-src=""
+            data-element="inner"
+            data-pb-style="OQ3FLKC"
+          >
+            <div data-content-type="block" data-appearance="default" data-element="main">
+              <div class="widget block block-static-block">
+                <div data-content-type="row" data-appearance="contained" data-element="main">
+                  <div
+                    class="banner banner-big home-1 main-banner with-description background-image-67bdd7c96b385 background-image-67bdd7c978f22"
+                    data-enable-parallax="0"
+                    data-parallax-speed="0.5"
+                    data-background-images='{\"desktop_image\":\"banner.jpg",\"mobile_image\":\"banner.jpg"}'
+                    data-background-type="image"
+                    data-video-loop="true"
+                    data-video-play-only-visible="true"
+                    data-video-lazy-load="true"
+                    data-video-fallback-src=""
+                    data-element="inner"
+                    data-pb-style="A4ATMFV"
+                  >
+                    <img
+                      src="{% if section.settings.imageUrl %}{{ section.settings.imageUrl | image_url }}{% else %}{{ 'banner.jpg' | asset_url }}{% endif %}"
+                      height=""
+                      width=""
+                      class="custom-banner banner banner-big home-1 main-banner with-description background-image-67bdd7c96b385 background-image-67bdd7c978f22"
+                    >
+                    <div
+                      class="pagebuilder-column-group"
+                      data-background-images="{}"
+                      data-content-type="column-group"
+                      data-appearance="default"
+                      data-grid-size="12"
+                      data-element="main"
+                      data-pb-style="GPOU8IH"
+                    >
+                      <div
+                        class="pagebuilder-column-line"
+                        data-content-type="column-line"
+                        data-element="main"
+                        data-pb-style="SIEV96G"
+                      >
+                        <div
+                          class="pagebuilder-column banner-description l-desc"
+                          data-content-type="column"
+                          data-appearance="full-height"
+                          data-background-images="{}"
+                          data-element="main"
+                          data-pb-style="WB80MFR"
+                        >
+                          <h1
+                            class="banner-title"
+                            data-content-type="heading"
+                            data-appearance="default"
+                            data-element="main"
+                          >
+                            {{ section.settings.bannerText | default: ' RESORT 25 CAMPAIGN' }}
+                          </h1>
+                          <div
+                            class="banner-link"
+                            data-content-type="text"
+                            data-appearance="default"
+                            data-element="main"
+                          >
+                            <p>
+                              <a tabindex="0" href="#">{{ section.settings.bannerTextLink | default: 'DISCOVER' }}</a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+{% endif %}
+{% schema %}
+{
+  "name": "banner",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_content",
+      "label": "Show this section",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "imageUrl",
+      "label": "Add Banner Image"
+    },
+    {
+      "type": "text",
+      "id": "bannerText",
+      "label": "Add Banner Text"
+    },
+    {
+      "type": "text",
+      "id": "bannerTextLink",
+      "label": "Add Banner Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "banner"
+    }
+  ]
+}
+{% endschema %}

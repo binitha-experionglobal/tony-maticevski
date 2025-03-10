@@ -1,0 +1,596 @@
+.page-header {
+  border-bottom: 1px solid #d1d1d1;
+  margin-bottom: 24px;
+  margin: 0;
+  border: 0;
+  background: #000;
+  height: 4.3rem;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 110;
+}
+
+.page-header .panel.wrapper {
+  border-bottom: 1px solid #e8e8e8;
+  border: 0;
+}
+.page-header .panel.wrapper .panel.header {
+  padding: 1.4rem 2.5rem;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  border-bottom: 0;
+}
+.page-header .panel.wrapper .header-custom-links {
+  display: none;
+}
+
+.page-header .header-custom-links {
+  float: left;
+  letter-spacing: 0.1rem;
+}
+
+.page-header .custom-links {
+  float: left;
+  font-size: 1.1rem;
+  line-height: 1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.page-header .custom-links > li {
+  float: left;
+  margin: 0;
+}
+.page-header .custom-links > li:not(:first-child):before {
+  background: #b2b2b2;
+  content: "";
+  float: left;
+  height: 1.1rem;
+  line-height: 1;
+  margin-left: 1rem;
+  margin-right: 1.1rem;
+  position: relative;
+  top: 0.1rem;
+  width: 0.1rem;
+}
+.page-header .custom-links > li a {
+  color: #b2b2b2;
+  letter-spacing: 0.79px;
+  float: left;
+  font-size: 1.1rem;
+  font-weight: 300;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.page-header .custom-links > li a:hover {
+  text-decoration: underline;
+}
+.page-header .header-actions {
+  float: right;
+  letter-spacing: 0.1rem;
+  position: relative;
+}
+.page-header .header-actions .wishlist {
+  color: #fff;
+  float: left;
+  font-size: 1.1rem;
+  line-height: 1;
+  margin: 0;
+}
+.page-header .header-actions .wishlist a {
+  color: #b2b2b2;
+  float: left;
+  font-size: 1.1rem;
+  font-weight: 300;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.page-header .header-actions .wishlist a:before {
+  content: "";
+  display: none;
+}
+.page-header .header-actions .wishlist a:hover {
+  text-decoration: underline;
+}
+.page-header .header-actions .wishlist a span {
+  display: none;
+}
+.page-header .header-actions > .header.links {
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.page-header .header-actions > .header.links:before {
+  background: #b2b2b2;
+  content: "";
+  float: left;
+  height: 1.1rem;
+  margin-left: 1rem;
+  margin-right: 1.1rem;
+  position: relative;
+  top: 0.1rem;
+  width: 0.1rem;
+}
+.page-header .header-actions > .header.links > li {
+  float: left;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+.page-header .header-actions > .header.links > li.greet {
+  color: #fff;
+  float: left;
+  font-size: 1.1rem;
+  font-weight: 300;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.page-header .header-actions > .header.links > li.greet .not-logged-in {
+  display: none;
+}
+.page-header .header-actions > .header.links > li.greet .logged-in {
+  display: inline-block;
+}
+.page-header
+  .header-actions
+  > .header.links
+  > li.customer-welcome
+  + .authorization-link {
+  display: none;
+}
+.page-header .header-actions > .header.links > li.authorization-link + li {
+  display: none;
+}
+.page-header .header-actions > .header.links > li > a {
+  color: #b2b2b2;
+  float: left;
+  letter-spacing: 0.79px;
+  font-size: 1.1rem;
+  font-weight: 300;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.page-header .header-actions > .header.links > li > a:hover {
+  text-decoration: underline;
+}
+.page-header .header-actions > .header.links .customer-welcome {
+  font-size: 1.1rem;
+  line-height: 1;
+  display: inline-block;
+  position: relative;
+}
+.page-header .header-actions > .header.links .customer-welcome:before,
+.page-header .header-actions > .header.links .customer-welcome:after {
+  content: "";
+  display: table;
+}
+.page-header .header-actions > .header.links .customer-welcome:after {
+  clear: both;
+}
+.page-header .header-actions > .header.links .customer-welcome .action.switch {
+  padding: 0;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
+.page-header
+  .header-actions
+  > .header.links
+  .customer-welcome
+  .action.switch
+  > span {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.page-header
+  .header-actions
+  > .header.links
+  .customer-welcome
+  .action.switch:after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.1rem;
+  line-height: 1;
+  color: inherit;
+  content: "\e90f";
+  font-family: "overdose-fashion";
+  margin: 0;
+  vertical-align: middle;
+  display: inline-block;
+  font-weight: 400;
+  speak: none;
+  text-align: center;
+}
+.page-header
+  .header-actions
+  > .header.links
+  .customer-welcome
+  .action.switch:hover:after {
+  color: inherit;
+}
+.page-header
+  .header-actions
+  > .header.links
+  .customer-welcome
+  .action.switch:active:after {
+  color: inherit;
+}
+.page-header
+  .header-actions
+  > .header.links
+  .customer-welcome
+  .action.switch.active {
+  display: inline-block;
+  text-decoration: none;
+}
+.page-header
+  .header-actions
+  > .header.links
+  .customer-welcome
+  .action.switch.active
+  > span {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.page-header
+  .header-actions
+  > .header.links
+  .customer-welcome
+  .action.switch.active:after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.1rem;
+  line-height: 1;
+  color: inherit;
+  content: "\e910";
+  font-family: "overdose-fashion";
+  margin: 0;
+  vertical-align: middle;
+  display: inline-block;
+  font-weight: 400;
+  speak: none;
+  text-align: center;
+}
+.page-header
+  .header-actions
+  > .header.links
+  .customer-welcome
+  .action.switch.active:hover:after {
+  color: inherit;
+}
+.page-header
+  .header-actions
+  > .header.links
+  .customer-welcome
+  .action.switch.active:active:after {
+  color: inherit;
+}
+.page-header .header-actions > .header.links .customer-welcome ul {
+  margin: 0;
+  padding: 0;
+  list-style: none none;
+  background: #fff;
+  border: 1px solid #bbb;
+  margin-top: 4px;
+  min-width: 100%;
+  z-index: 100;
+  box-sizing: border-box;
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
+}
+.page-header .header-actions > .header.links .customer-welcome ul li {
+  margin: 0;
+  padding: 0;
+}
+.page-header .header-actions > .header.links .customer-welcome ul li:hover {
+  background: #e8e8e8;
+  cursor: pointer;
+}
+.page-header .header-actions > .header.links .customer-welcome ul:before,
+.page-header .header-actions > .header.links .customer-welcome ul:after {
+  border-bottom-style: solid;
+  content: "";
+  display: block;
+  height: 0;
+  position: absolute;
+  width: 0;
+}
+.page-header .header-actions > .header.links .customer-welcome ul:before {
+  border: 6px solid;
+  border-color: transparent transparent #fff;
+  z-index: 99;
+}
+.page-header .header-actions > .header.links .customer-welcome ul:after {
+  border: 7px solid;
+  border-color: transparent transparent #bbb;
+  z-index: 98;
+}
+.page-header .header-actions > .header.links .customer-welcome ul:before {
+  right: 10px;
+  top: -12px;
+}
+.page-header .header-actions > .header.links .customer-welcome ul:after {
+  right: 9px;
+  top: -14px;
+}
+.page-header .header-actions > .header.links .customer-welcome.active {
+  overflow: visible;
+}
+.page-header .header-actions > .header.links .customer-welcome.active ul {
+  display: block;
+}
+.page-header .header-actions > .header.links .customer-welcome li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  line-height: 1.4;
+  padding: 0.8rem;
+}
+.page-header .header-actions > .header.links .customer-welcome li a:visited {
+  color: #333;
+  text-decoration: none;
+}
+.page-header .header-actions > .header.links .customer-welcome li a:hover {
+  color: #333;
+  text-decoration: none;
+}
+.page-header .header-actions > .header.links .customer-welcome li a:active {
+  color: #333;
+  text-decoration: none;
+}
+.page-header .header-actions > .header.links .customer-welcome .customer-name {
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+  padding-left: 1rem;
+}
+.page-header .header-actions > .header.links .customer-welcome .customer-menu {
+  display: none;
+}
+.page-header .header-actions > .header.links .customer-welcome .action.switch {
+  background-image: none;
+  background: 0 0;
+  -moz-box-sizing: content-box;
+  border: 0;
+  box-shadow: none;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  text-shadow: none;
+  font-weight: 400;
+  color: #fff;
+  display: inline-block;
+  font-size: 1.1rem;
+  line-height: 1;
+  vertical-align: top;
+  height: 1.1rem;
+}
+.page-header
+  .header-actions
+  > .header.links
+  .customer-welcome
+  .action.switch:focus,
+.page-header
+  .header-actions
+  > .header.links
+  .customer-welcome
+  .action.switch:active {
+  background: 0 0;
+  border: none;
+}
+.page-header
+  .header-actions
+  > .header.links
+  .customer-welcome
+  .action.switch:hover {
+  background: 0 0;
+  border: none;
+}
+.page-header
+  .header-actions
+  > .header.links
+  .customer-welcome
+  .action.switch.disabled,
+.page-header
+  .header-actions
+  > .header.links
+  .customer-welcome
+  .action.switch[disabled],
+fieldset[disabled]
+  .page-header
+  .header-actions
+  > .header.links
+  .customer-welcome
+  .action.switch {
+  pointer-events: none;
+  opacity: 0.5;
+}
+.page-header
+  .header-actions
+  > .header.links
+  .customer-welcome
+  .action.switch:after {
+  line-height: 1;
+}
+.page-header
+  .header-actions
+  > .header.links
+  .customer-welcome
+  .action.switch
+  span {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+.page-header .header-actions > .header.links .customer-welcome .header.links {
+  background: 0 0;
+  border: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0;
+  min-width: 16rem;
+  padding: 1.8rem 0 0;
+  text-transform: uppercase;
+}
+.page-header
+  .header-actions
+  > .header.links
+  .customer-welcome
+  .header.links
+  li {
+  background: #f3f3f3;
+  transition: background 0.3s ease-out;
+}
+.page-header
+  .header-actions
+  > .header.links
+  .customer-welcome
+  .header.links
+  li:hover {
+  background: #e6e6e6;
+}
+.page-header
+  .header-actions
+  > .header.links
+  .customer-welcome
+  .header.links
+  #invitation-send-link {
+  display: none;
+}
+.page-header .header-actions > .header.links .customer-welcome .header.links a {
+  color: #000;
+  text-decoration: none;
+}
+.page-header
+  .header-actions
+  > .header.links
+  .customer-welcome
+  .header.links:after,
+.page-header
+  .header-actions
+  > .header.links
+  .customer-welcome
+  .header.links:before {
+  display: none;
+}
+.page-header
+  .header-actions
+  > .header.links
+  .customer-welcome.active
+  .action.switch:after {
+  content: "\e910";
+}
+.page-header
+  .header-actions
+  > .header.links
+  .customer-welcome.active
+  .customer-menu {
+  display: block;
+}
+.page-header .header-actions > .header.links .customer-welcome .greet {
+  display: none;
+}
+.page-header .header-actions .minicart-wrapper .block-minicart {
+  margin-right: -2.5rem;
+  margin-top: 1.8rem;
+}
+.page-header .header-actions .minicart-wrapper > .action.showcart .counter.qty {
+  display: block;
+  float: left;
+}
+.page-header
+  .header-actions
+  .minicart-wrapper
+  > .action.showcart
+  .summary-count {
+  display: none;
+}
+.page-header .header-actions .account-link {
+  display: none;
+}
+.page-header .section-item-title {
+  background: 0 0;
+  border: 0;
+  color: #fff;
+  display: none;
+  height: 4rem;
+  padding: 1.1rem 0 0;
+  position: relative;
+  text-transform: uppercase;
+}
+.page-header .section-item-title .nav-sections-item-switch {
+  color: #fff;
+}
+.page-header .section-item-title {
+  background: 0 0;
+  border: 0;
+  color: #fff;
+  display: none;
+  height: 4rem;
+  padding: 1.1rem 0 0;
+  position: relative;
+  text-transform: uppercase;
+}
+.page-header .section-item-title .nav-sections-item-switch {
+  color: #fff;
+}
+
+.nav-sections-item-title {
+  background: #f2f2f2;
+  border: solid #e6e6e6;
+  border-width: 0 0 1px 1px;
+  box-sizing: border-box;
+  float: left;
+  height: 71px;
+  padding-top: 24px;
+  text-align: center;
+  width: 33.33%;
+}
+.page-header .section-item-title .nav-sections-item-switch {
+  color: #fff;
+}
+.nav-sections-item-title.active {
+  background: 0 0;
+  border-bottom: 0;
+}
+.nav-sections-item-title .nav-sections-item-switch:hover {
+  text-decoration: none;
+}
+.nav-sections-item-content {
+  box-sizing: border-box;
+  float: right;
+  margin-left: -100%;
+  margin-top: 71px;
+  width: 100%;
+  padding: 30px 0;
+}
+.nav-sections-item-content:before,
+.nav-sections-item-content:after {
+  content: "";
+  display: table;
+}
+.nav-sections-item-content:after {
+  clear: both;
+}
+.nav-sections-item-content.active {
+  display: block;
+}

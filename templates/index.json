@@ -1,0 +1,50 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+    "sections": {
+        "header":{
+            "type": "header",
+            "settings": {}
+        },
+        "home-banner":{
+            "type": "home-banner",
+            "settings": {}
+        },
+        "home-pagebuilder-first":{
+            "type": "home-pagebuilder-first",
+            "settings": {}
+        },
+        "home-pagebuilder-second":{
+            "type": "home-pagebuilder-second",
+            "settings": {}
+        },
+        "home-pagebuilder-third":{
+            "type": "home-pagebuilder-third",
+            "settings": {}
+        },
+        "home-pagebuilder-fourth":{
+            "type": "home-pagebuilder-fourth",
+            "settings": {}
+        },
+        "footer":{
+            "type": "footer",
+            "settings": {}
+        }
+    },
+    "order": [
+        "header",
+        "home-banner",
+        "home-pagebuilder-first",
+        "home-pagebuilder-second",
+        "home-pagebuilder-third",
+        "home-pagebuilder-fourth",
+        "footer"
+    ]
+}

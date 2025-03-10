@@ -1,0 +1,24 @@
+<html>
+  <head>
+    {{ 'main.css' | asset_url | stylesheet_tag }}
+
+    {{ 'index.css' | asset_url | stylesheet_tag }}
+    {{ 'styles.css' | asset_url | stylesheet_tag }}
+
+    {% comment %} {{ 'header.css' | asset_url | stylesheet_tag }} {% endcomment %}
+    {{ content_for_header }}
+    {% section 'head' %}
+  </head>
+  <body
+    id="html-body"
+    class="cms-home cms-index-index page-layout-1column-with-instagram"
+  >
+    <div class="page-wrapper">
+      <script src="{{ 'sizepopup.js' | asset_url }}" defer></script>
+      <script src="{{ 'popup.js' | asset_url }}" defer></script>
+      <main id="main" role="main">
+        {{ content_for_layout }}
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,303 @@
+<header class="page-header">
+  <div class="panel wrapper">
+    <div class="panel header">
+      <a
+        class="action skip contentarea"
+        href="/"
+      >
+        <span> Skip to Content </span>
+      </a>
+      <div class="header-custom-links">
+        <ul class="custom-links">
+          <li class="item top-search">
+            <a href="#" class="action toggle js-toggle-search"> Search </a>
+          </li>
+          <li class="item">
+            <a href="#" class="action js-search-by-size">Search by size</a>
+            {% render 'size-popup' %}
+            <script src="{{ 'sizepopup.js' | asset_url }}" defer></script>
+          </li>
+
+          <li class="item">
+            <a href="#" class="action js-subscribe">Subscribe</a>
+            {% render 'subscribe-popup' %}
+            <script src="{{ 'popup.js' | asset_url }}" defer></script>
+          </li>
+
+          <li class="item">
+            {% comment %} <a href="#" class="action js-subscribe">Subscribe</a> {% endcomment %}
+            <a class="  js-my-button">Click Me</a>
+            {% render 'size-popup' %}
+            <script src="{{ 'sizepopup.js' | asset_url }}" defer></script>
+          </li>
+        </ul>
+      </div>
+      <div class="header-actions">
+        <div class="link wishlist">
+          <a href="#">
+            Wishlist
+            <span class="counter qty"></span>
+          </a>
+        </div>
+        <ul class="header links">
+          <li class="greet welcome">
+            <span
+              class="logged-in"
+            >
+            </span>
+            <span
+              class="not-logged-in"
+            ></span>
+          </li>
+          <li class="link authorization-link" data-label="or">
+            <a href="#">Login</a>
+          </li>
+          <li>
+            <a href="#" id="idR0XwlfNn">Create an Account</a>
+          </li>
+        </ul>
+        <div data-block="minicart" class="minicart-wrapper">
+          <a
+            class="action showcart"
+            href="#"
+          >
+            <div
+              class="counter qty empty"
+            >
+              <div class="counter-number"></div>
+            </div>
+            <div class="summary-count"></div>
+          </a>
+          <div
+            class="block block-minicart"
+            data-role="dropdownDialog"
+          >
+            <div id="minicart-content-wrapper"></div>
+          </div>
+        </div>
+        <button class="account-link">
+          <span>Login</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="header content">
+    <span data-action="toggle-nav" class="action nav-toggle"><span>Toggle Nav</span></span>
+    <a
+      class="logo"
+      href="#"
+      title="Maticevski"
+      aria-label="store logo"
+    >
+      <img
+        height=""
+        width=""
+        src="{%if section.settings.logo%}{{section.settings.logo |  image_url }} {% else %}{{'logo.svg'| asset_url}}{% endif  %}"
+        title="Maticevski"
+        alt="Maticevski"
+        width="160"
+        height="21"
+      >
+    </a>
+    <div class="block block-search">
+      <div class="block block-title"><strong>Search</strong></div>
+      <div class="block block-content">
+        <form
+          class="form minisearch"
+          id="search_mini_form"
+          action="#"
+          method="get"
+        >
+          <div class="field search">
+            <label class="label" for="search" data-role="minisearch-label">
+              <span>Search</span>
+            </label>
+            <div class="control">
+              <input
+                id="search"
+                type="text"
+                name="q"
+                value=""
+                class="input-text"
+                maxlength="128"
+                role="combobox"
+              >
+              <div id="suggestion-container" style="display:none" class="search-popup"></div>
+            </div>
+          </div>
+          <div class="actions">
+            <button
+              type="submit"
+              title="Search"
+              class="action search"
+              aria-label="Search"
+            >
+              <span>Search</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="sections nav-sections">
+    <div
+      class="section-items nav-sections-items"
+    >
+      <div
+        class="section-item-title nav-sections-item-title"
+        data-role="collapsible"
+      >
+        <a
+          class="nav-sections-item-switch"
+          data-toggle="switch"
+          href="#store.menu"
+        >
+          Menu
+        </a>
+      </div>
+      <div
+        class="section-item-content nav-sections-item-content"
+        id="store.menu"
+        data-role="content"
+      >
+        <nav class="navigation" data-action="navigation">
+          <ul>
+            <li class="level0 nav-1 category-item first level-top">
+              <a href="#" class="level-top"
+                ><span>{{ section.settings.menu1 | default: 'New In' }}</span></a
+              >
+            </li>
+            <li class="level0 nav-2 category-item level-top parent is-static">
+              <a href="#" class="level-top"
+                ><span>{{ section.settings.menu2 | default: 'Styles' }}</span></a
+              >
+              <ul class="level0 submenu">
+                <li class="level1 nav-2-1 category-item first">
+                  <a href="#"><span>Dresses</span></a>
+                </li>
+                <li class="level1 nav-2-2 category-item">
+                  <a href="#"><span>Gowns</span></a>
+                </li>
+                <li class="level1 nav-2-3 category-item">
+                  <a href="#"><span>Tops</span></a>
+                </li>
+                <li class="level1 nav-2-4 category-item">
+                  <a href="#"><span>Skirts </span></a>
+                </li>
+                <li class="level1 nav-2-5 category-item">
+                  <a href="#"><span>Pants </span></a>
+                </li>
+                <li class="level1 nav-2-6 category-item">
+                  <a href="#"><span>Jackets/Coats</span></a>
+                </li>
+                <li class="level1 nav-2-7 category-item last">
+                  <a href="#"><span>Objects</span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="level0 nav-3 category-item level-top parent">
+              <a href="#" class="level-top"
+                ><span>{{ section.settings.menu3 | default: 'Collections' }}</span></a
+              >
+              <ul class="level0 submenu">
+                <li class="level1 nav-3-1 category-item first">
+                  <a href="#"><span>Resort 2025</span></a>
+                </li>
+                <li class="level1 nav-3-2 category-item">
+                  <a href="#"><span>Winter 2024 </span></a>
+                </li>
+                <li class="level1 nav-3-3 category-item last">
+                  <a href="#"><span>White Edit</span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="level0 nav-4 category-item level-top parent">
+              <a href="#" class="level-top"
+                ><span>{{ section.settings.menu4 | default: 'Campaigns' }}</span></a
+              >
+              <ul class="level0 submenu">
+                <li class="level1 nav-4-1 category-item first">
+                  <a href="#"><span>LOOK BOOK</span></a>
+                </li>
+                <li class="level1 nav-4-2 category-item">
+                  <a href="#"><span>WINTER 2024</span></a>
+                </li>
+                <li class="level1 nav-4-3 category-item">
+                  <a href="#"><span>PRE-FALL 2024</span></a>
+                </li>
+                <li class="level1 nav-4-4 category-item last">
+                  <a href="#"><span>BRIDAL 2024</span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="level0 nav-5 category-item last level-top">
+              <a href="#" class="level-top"
+                ><span>{{ section.settings.menu5 | default: 'Sale' }}</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div
+        class="section-item-title nav-sections-item-title"
+        data-role="collapsible"
+      >
+        <a
+          class="nav-sections-item-switch"
+          data-toggle="switch"
+          href="#"
+        >
+          Account
+        </a>
+      </div>
+      <div
+        class="section-item-content nav-sections-item-content"
+        id="store.links"
+        data-role="content"
+      ></div>
+    </div>
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "text",
+      "id": "menu1",
+      "label": "Add Menu 1 Text"
+    },
+    {
+      "type": "text",
+      "id": "menu2",
+      "label": "Add Menu 2 Text"
+    },
+    {
+      "type": "text",
+      "id": "menu3",
+      "label": "Add Menu 3 Text"
+    },
+    {
+      "type": "text",
+      "id": "menu4",
+      "label": "Add Menu 4 Text"
+    },
+    {
+      "type": "text",
+      "id": "menu5",
+      "label": "Add Menu 5 Text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "header"
+    }
+  ]
+}
+{% endschema %}

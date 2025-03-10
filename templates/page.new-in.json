@@ -1,0 +1,21 @@
+{
+    "sections": {
+        "header":{
+            "type": "header",
+            "settings": {}
+        },
+        "new-in":{
+            "type": "new-in",
+            "settings": {}
+        },
+        "footer":{
+            "type": "footer",
+            "settings": {}
+        }
+    },
+    "order": [
+        "header",
+        "new-in",
+        "footer"
+    ]
+}
