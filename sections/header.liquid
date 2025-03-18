@@ -165,27 +165,35 @@
                 ><span>{{ section.settings.menu2 | default: 'Styles' }}</span></a
               >
               <ul class="level0 submenu">
-                <li class="level1 nav-2-1 category-item first">
-                  <a href="#"><span>Dresses</span></a>
-                </li>
-                <li class="level1 nav-2-2 category-item">
-                  <a href="#"><span>Gowns</span></a>
-                </li>
-                <li class="level1 nav-2-3 category-item">
-                  <a href="#"><span>Tops</span></a>
-                </li>
-                <li class="level1 nav-2-4 category-item">
-                  <a href="#"><span>Skirts </span></a>
-                </li>
-                <li class="level1 nav-2-5 category-item">
-                  <a href="#"><span>Pants </span></a>
-                </li>
-                <li class="level1 nav-2-6 category-item">
-                  <a href="#"><span>Jackets/Coats</span></a>
-                </li>
-                <li class="level1 nav-2-7 category-item last">
-                  <a href="#"><span>Objects</span></a>
-                </li>
+                {% assign menus = shop.metaobjects.header_menu.values %}
+                {% for announcement in menus %}
+                  <li class="level1 nav-2-1 category-item first">
+                    <a href="#"
+                      ><span>{{ announcement.menus.menu_title }}</span></a
+                    >
+                  </li>
+                {% endfor %}
+
+                {% comment %}
+                  <li class="level1 nav-2-2 category-item">
+                    <a href="#"><span>Gowns</span></a>
+                  </li>
+                  <li class="level1 nav-2-3 category-item">
+                    <a href="#"><span>Tops</span></a>
+                  </li>
+                  <li class="level1 nav-2-4 category-item">
+                    <a href="#"><span>Skirts </span></a>
+                  </li>
+                  <li class="level1 nav-2-5 category-item">
+                    <a href="#"><span>Pants </span></a>
+                  </li>
+                  <li class="level1 nav-2-6 category-item">
+                    <a href="#"><span>Jackets/Coats</span></a>
+                  </li>
+                  <li class="level1 nav-2-7 category-item last">
+                    <a href="#"><span>Objects</span></a>
+                  </li>
+                {% endcomment %}
               </ul>
             </li>
             <li class="level0 nav-3 category-item level-top parent">
