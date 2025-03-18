@@ -45,194 +45,201 @@
                         data-element="main"
                         data-pb-style="Y788QL8"
                       >
-                        {% comment %} {% for block in section.blocks %} {% endcomment %}
-                        {% comment %} {% case block.type %} {% endcomment %}
-                        <div
-                          class="pagebuilder-column banner-l"
-                          data-content-type="column"
-                          data-appearance="full-height"
-                          data-background-images="{}"
-                          data-element="main"
-                          data-pb-style="JKJB8NA"
-                        >
-                          <div
-                            class="banner-text home-title tab-align-left"
-                            data-content-type="tabs"
-                            data-appearance="default"
-                            data-active-tab="0"
-                            data-element="main"
-                          >
-                            {% comment %}
-                              <ul
-                                role="tablist"
-                                class="tabs-navigation"
-                                data-element="navigation"
-                                data-pb-style="FCFTDTG"
-                              >
-                                <li role="tab" class="tab-header" data-element="headers" data-pb-style="LCOQALP">
-                                  <a href="#PO2XH3F" class="tab-title"><span class="tab-title">Tab 1</span></a>
-                                </li>
-                              </ul>
-                            {% endcomment %}
-
-                            <div class="tabs-content" data-element="content" data-pb-style="C1663Q5">
+                        {%- for block in section.blocks -%}
+                          {%- case block.type -%}
+                            {%- when 'image_block' -%}
                               <div
-                                data-content-type="tab-item"
-                                data-appearance="default"
-                                data-tab-name="Tab 1"
+                                class="pagebuilder-column banner-l"
+                                data-content-type="column"
+                                data-appearance="full-height"
                                 data-background-images="{}"
                                 data-element="main"
-                                id="PO2XH3F"
-                                data-pb-style="JVHMB1J"
+                                data-pb-style="JKJB8NA"
                               >
-                                {% comment %} {% when 'textarea_block' %} {% endcomment %}
-                                <h1
-                                  class="banner-title home-title"
-                                  data-content-type="heading"
-                                  data-appearance="default"
-                                  data-element="main"
-                                  data-pb-style="QMTBP11"
-                                >
-                                  {{
-                                    block.settings.text
-                                    | default: 'THE ELEMENTS OF DRESSING COME TO LIFE, CONTINUING THE WAVES FROM RESORT, AND PLAYING WITH A MOUTHWATERING PALETTE THAT IS BOTH VIBRANTLY FRESH AND WARM. '
-                                  }}
-                                </h1>
-                                {% comment %} {% when 'text_block' %} {% endcomment %}
                                 <div
-                                  class="banner-text-link"
-                                  data-content-type="text"
+                                  class="banner-text home-title tab-align-left"
+                                  data-content-type="tabs"
                                   data-appearance="default"
+                                  data-active-tab="0"
                                   data-element="main"
                                 >
-                                  <p style="text-align: center;">
-                                    <a tabindex="0" href="#">{{ block.settings.linkText | default: 'EXPLORE' }}</a>
-                                  </p>
+                                  {% comment %}
+                                    <ul
+                                      role="tablist"
+                                      class="tabs-navigation"
+                                      data-element="navigation"
+                                      data-pb-style="FCFTDTG"
+                                    >
+                                      <li role="tab" class="tab-header" data-element="headers" data-pb-style="LCOQALP">
+                                        <a href="#PO2XH3F" class="tab-title"><span class="tab-title">Tab 1</span></a>
+                                      </li>
+                                    </ul>
+                                  {% endcomment %}
+
+                                  <div class="tabs-content" data-element="content" data-pb-style="C1663Q5">
+                                    <div
+                                      data-content-type="tab-item"
+                                      data-appearance="default"
+                                      data-tab-name="Tab 1"
+                                      data-background-images="{}"
+                                      data-element="main"
+                                      id="PO2XH3F"
+                                      data-pb-style="JVHMB1J"
+                                    >
+                                      {%- for block in section.blocks -%}
+                                        {%- case block.type -%}
+                                          {%- when 'textarea_block' -%}
+                                            <h1
+                                              class="banner-title home-title"
+                                              data-content-type="heading"
+                                              data-appearance="default"
+                                              data-element="main"
+                                              data-pb-style="QMTBP11"
+                                            >
+                                              {{
+                                                block.settings.text
+                                                | default: 'THE ELEMENTS OF DRESSING COME TO LIFE, CONTINUING THE WAVES FROM RESORT, AND PLAYING WITH A MOUTHWATERING PALETTE THAT IS BOTH VIBRANTLY FRESH AND WARM. '
+                                              }}
+                                            </h1>
+                                          {%- when 'text_block' -%}
+                                            <div
+                                              class="banner-text-link"
+                                              data-content-type="text"
+                                              data-appearance="default"
+                                              data-element="main"
+                                            >
+                                              <p style="text-align: center;">
+                                                <a tabindex="0" href="#">
+                                                  {{- block.settings.linkText | default: 'EXPLORE' -}}
+                                                </a>
+                                              </p>
+                                            </div>
+                                        {% endcase %}
+                                      {% endfor %}
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div
+                                  class="banner tab-align-left"
+                                  data-content-type="tabs"
+                                  data-appearance="default"
+                                  data-active-tab="0"
+                                  data-element="main"
+                                >
+                                  {% comment %}
+                                    <ul
+                                      role="tablist"
+                                      class="tabs-navigation"
+                                      data-element="navigation"
+                                      data-pb-style="J8QB4FR"
+                                    >
+                                      <li role="tab" class="tab-header" data-element="headers" data-pb-style="HXMYJN9">
+                                        <a href="#KVL5D35" class="tab-title"><span class="tab-title">Tab 1</span></a>
+                                      </li>
+                                    </ul>
+                                  {% endcomment %}
+                                  <div class="tabs-content" data-element="content" data-pb-style="SJD5V3U">
+                                    <div
+                                      data-content-type="tab-item"
+                                      data-appearance="default"
+                                      data-tab-name="Tab 1"
+                                      data-background-images="{}"
+                                      data-element="main"
+                                      id="KVL5D35"
+                                      data-pb-style="CG2EQ50"
+                                    >
+                                      <figure
+                                        class="banner banner-img"
+                                        data-content-type="image"
+                                        data-appearance="full-width"
+                                        data-element="main"
+                                        data-pb-style="T67MMKF"
+                                      >
+                                        <a
+                                          href="#"
+                                          target=""
+                                          data-link-type="default"
+                                          title=""
+                                          data-element="link"
+                                        >
+                                          <img
+                                            height=""
+                                            width=""
+                                            class="pagebuilder-mobile-hidden"
+                                            src="{% if block.settings.imageurl %}{{ block.settings.imageurl | image_url }}{% else %}{{ 'home-pb-first-1.jpg' | asset_url }}{% endif %}"
+                                            alt=""
+                                            data-element="desktop_image"
+                                            data-pb-style="LO5044V"
+                                          >
+                                          {% comment %}
+                                            <img
+                                                height=""
+                                                width=""
+                                                class="pagebuilder-mobile-only"
+                                                src="{% if section.blocks.settings.imageurl %}{{ section.blocks.settings.imageurl | image_url }}{% else %}{{ 'home-pb-first-1-mobile.jpg' | asset_url }}{% endif %}"
+                                                alt="{{ section.settings.alt | default: 'Default Alt Text' }}"
+                                                data-element="mobile_image"
+                                                data-pb-style="N8OXQIF"
+                                            >
+                                          {% endcomment %}
+                                        </a>
+                                      </figure>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
-                            </div>
-                          </div>
-                          {% comment %} {% when 'image_block' %} {% endcomment %}
-                          <div
-                            class="banner tab-align-left"
-                            data-content-type="tabs"
-                            data-appearance="default"
-                            data-active-tab="0"
-                            data-element="main"
-                          >
-                            {% comment %}
-                              <ul
-                                role="tablist"
-                                class="tabs-navigation"
-                                data-element="navigation"
-                                data-pb-style="J8QB4FR"
-                              >
-                                <li role="tab" class="tab-header" data-element="headers" data-pb-style="HXMYJN9">
-                                  <a href="#KVL5D35" class="tab-title"><span class="tab-title">Tab 1</span></a>
-                                </li>
-                              </ul>
-                            {% endcomment %}
-                            <div class="tabs-content" data-element="content" data-pb-style="SJD5V3U">
+                            {%- when 'video_block' -%}
                               <div
-                                data-content-type="tab-item"
-                                data-appearance="default"
-                                data-tab-name="Tab 1"
+                                class="pagebuilder-column banner-r slick-slider auto-slide slick-initialized"
+                                data-content-type="column"
+                                data-appearance="full-height"
                                 data-background-images="{}"
                                 data-element="main"
-                                id="KVL5D35"
-                                data-pb-style="CG2EQ50"
+                                data-pb-style="Y7NQEO5"
                               >
-                                <figure
-                                  class="banner banner-img"
-                                  data-content-type="image"
-                                  data-appearance="full-width"
-                                  data-element="main"
-                                  data-pb-style="T67MMKF"
-                                >
-                                  <a
-                                    href="#"
-                                    target=""
-                                    data-link-type="default"
-                                    title=""
-                                    data-element="link"
-                                  >
-                                    <img
-                                      height=""
-                                      width=""
-                                      class="pagebuilder-mobile-hidden"
-                                      src="{% if block.settings.imageurl %}{{ block.settings.imageurl | image_url }}{% else %}{{ 'home-pb-first-1.jpg' | asset_url }}{% endif %}"
-                                      alt=""
-                                      data-element="desktop_image"
-                                      data-pb-style="LO5044V"
-                                    >
-                                    {% comment %}
-                                      <img
-                                          height=""
-                                          width=""
-                                          class="pagebuilder-mobile-only"
-                                          src="{% if section.blocks.settings.imageurl %}{{ section.blocks.settings.imageurl | image_url }}{% else %}{{ 'home-pb-first-1-mobile.jpg' | asset_url }}{% endif %}"
-                                          alt="{{ section.settings.alt | default: 'Default Alt Text' }}"
-                                          data-element="mobile_image"
-                                          data-pb-style="N8OXQIF"
-                                      >
-                                    {% endcomment %}
-                                  </a>
-                                </figure>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        {% comment %} {% when 'video_block' %} {% endcomment %}
-                        <div
-                          class="pagebuilder-column banner-r slick-slider auto-slide slick-initialized"
-                          data-content-type="column"
-                          data-appearance="full-height"
-                          data-background-images="{}"
-                          data-element="main"
-                          data-pb-style="Y7NQEO5"
-                        >
-                          <div class="slick-list draggable">
-                            <div
-                              class="slick-track"
-                              style="opacity: 1; width: 568px; transform: translate3d(0px, 0px, 0px);"
-                            >
-                              <div
-                                class="slick-slide slick-current slick-active"
-                                data-slick-index="0"
-                                aria-hidden="false"
-                                style="width: 568px;"
-                              >
-                                <div>
+                                <div class="slick-list draggable">
                                   <div
-                                    class="slick-slider-item-video"
-                                    data-content-type="video"
-                                    data-appearance="default"
-                                    data-element="main"
-                                    style="width: 100%; display: inline-block;"
+                                    class="slick-track"
+                                    style="opacity: 1; width: 568px; transform: translate3d(0px, 0px, 0px);"
                                   >
-                                    <div class="pagebuilder-video-inner" data-element="inner">
-                                      <div class="pagebuilder-video-wrapper" data-element="wrapper">
-                                        <div class="pagebuilder-video-container">
-                                          <video
-                                            frameborder="0"
-                                            src="{% if block.settings.videourl %}{{ block.settings.videourl |  video_tag }}{% else %}{{ 'home-pb-first-2.mp4' | asset_url }}{% endif %}"
-                                            autoplay="true"
-                                            muted="true"
-                                            playsinline="true"
-                                            data-element="video"
-                                            loop="loop"
-                                          ></video>
+                                    <div
+                                      class="slick-slide slick-current slick-active"
+                                      data-slick-index="0"
+                                      aria-hidden="false"
+                                      style="width: 568px;"
+                                    >
+                                      <div>
+                                        <div
+                                          class="slick-slider-item-video"
+                                          data-content-type="video"
+                                          data-appearance="default"
+                                          data-element="main"
+                                          style="width: 100%; display: inline-block;"
+                                        >
+                                          <div class="pagebuilder-video-inner" data-element="inner">
+                                            <div class="pagebuilder-video-wrapper" data-element="wrapper">
+                                              <div class="pagebuilder-video-container">
+                                                <video
+                                                  frameborder="0"
+                                                  src="{% if block.settings.videourl %}{{ block.settings.videourl |  video_tag }}{% else %}{{ 'home-pb-first-2.mp4' | asset_url }}{% endif %}"
+                                                  autoplay="true"
+                                                  muted="true"
+                                                  playsinline="true"
+                                                  data-element="video"
+                                                  loop="loop"
+                                                ></video>
+                                              </div>
+                                            </div>
+                                          </div>
                                         </div>
                                       </div>
                                     </div>
                                   </div>
                                 </div>
                               </div>
-                            </div>
-                          </div>
-                        </div>
-                        {% comment %} {% endcase %} {% endcomment %}
-                        {% comment %} {% endfor %} {% endcomment %}
+                          {% endcase %}
+                        {% endfor %}
                       </div>
                     </div>
                   </div>
